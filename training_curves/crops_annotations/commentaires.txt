@@ -1,0 +1,4 @@
+L'effet du pre-training semble assez négligeable, ce qui est raisonnable étant donné que les annotations ne ressemblent pas à des images naturelles telles que celles présentes dans ImageNet.
+
+Problème dans la création du jeu de données :
+on colorie en blanc quand c'est brûlé + herbe mais sans différencier entre les niveaux de brûlé donc il y a des situations où l'information est perdue, par exemple un carré entièrement blanc peut représenter une zone entièrement brûlée au niveau 3 ou 4 sans qu'on puisse savoir lequel

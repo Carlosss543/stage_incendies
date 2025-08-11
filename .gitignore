@@ -1,3 +1,5 @@
 # ignorer les dossiers qui contiennent les données
 data/
 wildfires-cems/
+weights/
+

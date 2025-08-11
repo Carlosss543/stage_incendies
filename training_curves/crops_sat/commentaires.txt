@@ -1,0 +1,20 @@
+On observe ce qui semble être de l'overfitting donc ajout de data augmentation.
+Initialiser avec les poids pré-entraînés sur ImageNet stabilise l'entraînement et améliore la loss finale.
+
+
+
+train et val accuracies finales aux alentours de 90% 
+
+cette accuracy est supérieure à celle que l'on obtient en prédisant seulement la classe la plus présente dans le dataset (la classe 0) (on aurait alors une train acc de 0.77) et après exament des outputs on voit que ce n'est effectivement pas ce que fait le modèle
+
+ex d'outputs et la vraie classe associée :
+tensor([ 2.3556, -2.6186, -0.2064, -1.2002, -3.4724], device='cuda:0', grad_fn=<SelectBackward0>) 0
+tensor([ 1.6856, -5.7533, -2.8441, -1.0739,  1.7278], device='cuda:0', grad_fn=<SelectBackward0>) 4
+tensor([ 3.7656, -6.3611, -4.2710, -4.0810, -0.4606], device='cuda:0', grad_fn=<SelectBackward0>) 0
+tensor([ 0.8615, -1.8787,  0.6577,  0.8198, -3.7017], device='cuda:0', grad_fn=<SelectBackward0>) 2
+tensor([-0.3933, -7.8744, -2.2494, -1.9388,  4.6236], device='cuda:0', grad_fn=<SelectBackward0>) 4
+tensor([ 5.6692, -6.6307, -3.3372, -3.6314, -3.8462], device='cuda:0', grad_fn=<SelectBackward0>) 0
+tensor([ 4.8809, -6.8200, -4.5689, -4.4787, -1.0812], device='cuda:0', grad_fn=<SelectBackward0>) 0
+tensor([-3.2487, -4.0630, -0.0795,  2.1833,  1.4950], device='cuda:0', grad_fn=<SelectBackward0>) 3
+tensor([ 1.5442, -7.2339, -3.9423, -1.7955,  3.0794], device='cuda:0', grad_fn=<SelectBackward0>) 4
+tensor([-2.2026, -4.1913, -3.0204, -1.0746,  3.5555], device='cuda:0', grad_fn=<SelectBackward0>) 4
