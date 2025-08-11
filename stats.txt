@@ -1,0 +1,48 @@
+https://github.com/MatteoM95/CEMS-Wildfire-Dataset/tree/main?tab=readme-ov-file
+
+Les images satellites d'incendies ont été prises dans la période 2017-2023.
+Les LULC maps ont été réalisées avec des données de 2020.
+
+
+
+feature0 : No Data
+feature1 : Trees
+feature2 : Water
+feature3 : Flooded Vegetation
+feature4 : Grass
+feature5 : Bare Ground
+feature6 : Built Area
+feature7 : Scrub/shrub
+feature8 : Crops
+feature9 : Snow/Ice
+feature10 : Clouds
+
+
+features qui semblent importantes :
+1, 2, 3, 6, 8, 10
+
+
+
+
+crop_size = 32
+
+nb de crops au total:
+- train set : 455135
+- val set :
+- test set : 168269
+
+Nombre de carrés par catégorie de dégât :
+-train set:
+    Catégorie 0: 350613 carrés
+    Catégorie 1: 2621 carrés
+    Catégorie 2: 17760 carrés
+    Catégorie 3: 33582 carrés
+    Catégorie 4: 50507 carrés
+- val set:
+
+-test set:
+    Catégorie 0: 153414 carrés
+    Catégorie 1: 1027 carrés
+    Catégorie 2: 2586 carrés
+    Catégorie 3: 6618 carrés
+    Catégorie 4: 4624 carrés
