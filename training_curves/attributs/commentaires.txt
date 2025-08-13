@@ -1,0 +1,8 @@
+On atteint une accuracy supérieure à 95% pour le train et le val.
+
+Enlever certaines features jugées peu utiles par inspection visuelle des histogrammes de stats.ipynb ne déteriore pas la performance.
+
+Passer de 4 bins à 8 bins ne modifie pas l'accuracy.
+L'accuracy diminue très légèrement (de l'ordre de 1%) quand on passe de 4 à 3 bins.
+
+Rajouter des neurones au réseau ne semble pas modifier l'accuracy.

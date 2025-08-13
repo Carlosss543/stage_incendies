@@ -19,8 +19,10 @@ feature10 : Clouds
 
 
 features qui semblent importantes :
-1, 2, 3, 6, 8, 10
+1, 2, 3, 4, 6, 7, 8
 
+feature0 n'est présente que dans le test_set
+feature9 et feature10 sont très peu présentes et en particulier absentes du val_set
 
 
 
@@ -28,7 +30,7 @@ crop_size = 32
 
 nb de crops au total:
 - train set : 455135
-- val set :
+- val set : 99236
 - test set : 168269
 
 Nombre de carrés par catégorie de dégât :
@@ -38,7 +40,14 @@ Nombre de carrés par catégorie de dégât :
     Catégorie 2: 17760 carrés
     Catégorie 3: 33582 carrés
     Catégorie 4: 50507 carrés
+    rapport catégorie0 / total : 0.770
 - val set:
+    Catégorie 0: 85754 carrés
+    Catégorie 1: 41 carrés
+    Catégorie 2: 2899 carrés
+    Catégorie 3: 6629 carrés
+    Catégorie 4: 3913 carrés
+    rapport catégorie0 / total : 0.864
 
 -test set:
     Catégorie 0: 153414 carrés
@@ -46,3 +55,4 @@ Nombre de carrés par catégorie de dégât :
     Catégorie 2: 2586 carrés
     Catégorie 3: 6618 carrés
     Catégorie 4: 4624 carrés
+    rapport catégorie0 / total : 0.912
