@@ -2,3 +2,7 @@ L'effet du pre-training semble assez négligeable, ce qui est raisonnable étant
 
 Problème dans la création du jeu de données :
 on colorie en blanc quand c'est brûlé + herbe mais sans différencier entre les niveaux de brûlé donc il y a des situations où l'information est perdue, par exemple un carré entièrement blanc peut représenter une zone entièrement brûlée au niveau 3 ou 4 sans qu'on puisse savoir lequel
+
+Résolution:
+quand on ajoute différents niveaux de brûlé pour l'herbe et pour les arbres l'accuracy augmente énormément jusqu'à plus de 97%
+l'effet du pre-training semble toujours assez négligeable
