@@ -18,3 +18,7 @@ tensor([ 4.8809, -6.8200, -4.5689, -4.4787, -1.0812], device='cuda:0', grad_fn=<
 tensor([-3.2487, -4.0630, -0.0795,  2.1833,  1.4950], device='cuda:0', grad_fn=<SelectBackward0>) 3
 tensor([ 1.5442, -7.2339, -3.9423, -1.7955,  3.0794], device='cuda:0', grad_fn=<SelectBackward0>) 4
 tensor([-2.2026, -4.1913, -3.0204, -1.0746,  3.5555], device='cuda:0', grad_fn=<SelectBackward0>) 4
+
+
+
+Changer la taille des crops pour passer de 32x32 à 64x64 améliore peu l'accuracy et aggrave l'overfitting.

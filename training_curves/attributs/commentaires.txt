@@ -6,3 +6,6 @@ Passer de 4 bins à 8 bins ne modifie pas l'accuracy.
 L'accuracy diminue très légèrement (de l'ordre de 1%) quand on passe de 4 à 3 bins.
 
 Rajouter des neurones au réseau ne semble pas modifier l'accuracy.
+
+
+On peut diminuer fortement la taille du réseau jusqu'à relier directement la sortie et l'entrée par un nn.Linear en perdant moins de 1% d'accuracy.
