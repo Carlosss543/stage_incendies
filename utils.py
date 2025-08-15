@@ -39,3 +39,15 @@ def rajouter_features(img, img_burn):
 
     img = toPIL(tensor)
     return img
+
+
+
+def moving_average(x, w=10):
+    smoothed = []
+    for i in range(len(x)):
+        start = max(0, i - w + 1)
+        window = x[start:i+1]
+        smoothed.append(sum(window) / len(window))
+    return smoothed
+
+
