@@ -2,6 +2,9 @@ Pour créer le jeu de données final il faut lancer create_dataset_final.ipynb e
 Il faut déjà avoir téléchargé le jeu de données data/dataset/split avec split égal à train, val ou test.
 
 
+Il y a un exemple de loader pytorch dans loader.ipynb.
+
+
 
 Les données sont dans le dossier data dont l'arborescence est :
     data
