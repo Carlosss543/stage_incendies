@@ -1,5 +1,14 @@
 # ignorer les dossiers qui contiennent les données
 data/
 wildfires-cems/
+
+# ignorer le dossier à poids
 weights/
 
+# ignorer les trucs qui ne servent pas au projet
+resnet_sur_imgs.ipynb
+segmentation_semantique.ipynb
+sparse_autoencoder.ipynb
+
+# ignorer le pycache
+__pycache__/
