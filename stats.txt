@@ -56,3 +56,32 @@ Nombre de carrés par catégorie de dégât :
     Catégorie 3: 6618 carrés
     Catégorie 4: 4624 carrés
     rapport catégorie0 / total : 0.912
+
+
+
+
+
+
+
+
+
+
+
+
+classes pour segmentation sémantique:
+0 : tout ce qui n'est pas dans le reste
+1 : feature1 (Trees)
+2 : feature2 (Water)
+3 : feature3 (Flooded Vegetation)
+4 : feature4 (Grass)
+5 : feature 6 (Built Area)
+6 : feature 7 (Scrub/shrub)
+7 : feature 8 (Crops)
+8 : feature1d1
+9 : feature1d2
+10 : feature1d3
+11 : feature1d4
+12 : feature7d1
+13 : feature7d2
+14 : feature7d3
+15 : feature7d4
