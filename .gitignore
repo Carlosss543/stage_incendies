@@ -12,3 +12,10 @@ sparse_autoencoder.ipynb
 
 # ignorer le pycache
 __pycache__/
+
+
+
+
+
+# ignorer la segmentation sémantique pour l'instant
+segmentation_semantique/
