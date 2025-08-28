@@ -7,6 +7,3 @@ weights/
 
 # ignorer le pycache
 __pycache__/
-
-# ignorer les trucs qui ne servent pas au projet
-resnet_sur_imgs.ipynb

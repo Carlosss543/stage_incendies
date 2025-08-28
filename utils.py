@@ -1,5 +1,11 @@
 import torch
 from torchvision import transforms
+from glob import glob
+import os
+import json
+from torch.utils.data import Dataset
+from PIL import Image
+import random
 
 
 transform = transforms.ToTensor()
@@ -50,4 +56,63 @@ def moving_average(x, w=10):
         smoothed.append(sum(window) / len(window))
     return smoothed
 
+
+
+class ImageDataset(Dataset):
+
+    def __init__(self, partial_path, transform=None):
+        self.transform = transform
+
+        # get the dictionnary with the crop's infos
+        with open(f'{partial_path}_data.json', 'r', encoding='utf-8') as f:
+            dico = json.load(f)
+
+        # get all image paths, attributs and classes
+        self.data = []
+
+        for path in glob(os.path.join(f"{partial_path}", "**", "*.png"), recursive=True):
+            filename = os.path.basename(path)      # "crop_i.png"
+            crop_name = os.path.splitext(filename)[0]   # "crop_i"
+
+            attributs = dico[crop_name]["attributs"]
+            damage = dico[crop_name]["niveau de brûlé"]
+
+            self.data.append((path, attributs, damage))
+
+
+    def __len__(self):
+        return len(self.data)
+
+
+    def __getitem__(self, idx):
+        img_path, attribut, label = self.data[idx]
+
+        img = Image.open(img_path).convert("RGB")
+
+        if self.transform is not None:
+            img = self.transform(img)
+
+        attribut = torch.tensor(attribut, dtype=torch.float32)
+        label = torch.tensor(label, dtype=torch.int64)
+
+        return img, attribut, label
+
+
+
+def random_90_rotation(img):
+    angles = [0, 90, 180, 270]
+    return transforms.functional.rotate(img, angle=random.choice(angles))
+
+
+
+def get_device():
+    """
+    Renvoie le device à utiliser selon les disponibilités (cuda -> mps -> cpu).
+    """
+    if torch.cuda.is_available():
+        return "cuda"
+    elif torch.backends.mps.is_available():
+        return "mps"
+    else:
+        return "cpu"
 
