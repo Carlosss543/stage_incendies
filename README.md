@@ -14,3 +14,11 @@ Les données sont dans le dossier data dont l'arborescence est :
     ├─ dataset_crops_annotations
     ├─ dataset_crops_sat -->
 
+
+
+
+
+
+
+Le dossier "approche_concurrente" contient comme son nom l'indique l'implémentation d'une approche concurrente qui consiste à utiliser le Resnet18 pour prédire les attributs puis à utiliser une couche linéaire pour passer des attributs aux classes. Ainsi la prédiction des attributs ne se fait plus de manière implicite mais explicite.
+
