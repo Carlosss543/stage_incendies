@@ -25,7 +25,8 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 <br>
 
-#### Le dossier "create_datasets" contient des codes pour créer divers types de datasets qui m'ont été utiles au cours du projet.<br>"create_attributs.ipynb" et "create_dataset_crops.ipynb" sont obsolètes car "create_dataset_final.ipynb" fait les deux et "create_datasets_crops_paires.ipynb" est seulement utile pour la partie segmentation. <br>
+#### Le dossier "create_datasets" contient des codes pour créer divers types de datasets qui m'ont été utiles au cours du projet.
+**"create_attributs.ipynb" et "create_dataset_crops.ipynb" sont obsolètes car "create_dataset_final.ipynb" fait les deux et "create_datasets_crops_paires.ipynb" est seulement utile pour la partie segmentation. <br>**
 - create_attributs.ipynb produit des paires (concepts, classes) <br>
 - create_dataset_final.ipynb produit des triplets (images, concepts, classes) <br>
 - create_datasets_crops_paires produit des paires (images, masques de brûlé) avec images pouvant être les images satellites ou annotées <br>
