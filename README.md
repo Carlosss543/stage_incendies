@@ -44,7 +44,6 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 - stats.txt contient un résumé de certaines de ces informations et **une explication de ce à quoi correpondent les différentes features** <br>
 - tests.ipynb contient quelques tests faits sur le dataset (vérifier que les intersections des splits sont vides, trouver les tailles minimales et maximales des images)
 
-
 <br>
 
 #### Le dossier "interprétabilité" contient les différents modèles de l'architecture et des tests pour voir à quoi réagissent les neurones de la couche sparse du vae.
@@ -61,6 +60,7 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 - imgs_to_attributs.ipynb entraîne un resnet18 à prédire les concepts à partir de l'image satellite
 - interpretabilite.ipynb n'est pas très complet, il contient seulement un code qui affiche les images activant le plus fortement un concept
 
+<br>
 
 #### Le dossier "segmentation_semantique" contient tous les codes de segmentation sémantique et de traitement d'images que j'ai réalisé.
 - segmentation_semantique_ann.ipynb rajoute une conv transposed à un resnet18 pour prédire l'image annotée
@@ -89,7 +89,7 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 | modèles (dans divers/)        | train accuracy | val accuracy |
 |-------------------------------|----------------|--------------|
-| resnet18 (img -> classe)      | ~91%           | ~92%         |
+| resnet18 (img -> classe)      | ~92%           | ~91%         |
 | linear (concepts -> classe)   | ~95%           | ~97%         |
 
 <br>
@@ -97,7 +97,7 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 | modèles (approche concurrente)| train accuracy | val accuracy |
 |-------------------------------|----------------|--------------|
 | resnset18 (img -> concept)    | ~80%           | ~80%         |
-| linear (concepts -> classe)   | ~90%           | ~92%         |
+| linear (concepts -> classe)   | ~92%           | ~90%         |
 
 <br><br>
 
