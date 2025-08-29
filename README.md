@@ -80,12 +80,25 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 <br>
 
+---
+
+<br>
+
+
 ## RÉCAPITULATIF DES ACCURACIES
 
-| modèle    | train accuracy | val accuracy |
-|-----------|----------------|--------------|
-| Ligne 1   | Valeur A       | Valeur B     |
-| Ligne 2   | Valeur C       | Valeur D     |
+| modèles (dans divers/)        | train accuracy | val accuracy |
+|-------------------------------|----------------|--------------|
+| resnet18 (img -> classe)      | ~91%           | ~92%         |
+| linear (concepts -> classe)   | ~95%           | ~97%         |
+|---------------------------------------------------------------|
+
+<br>
+
+| modèles (approche concurrente)| train accuracy | val accuracy |
+|-------------------------------|----------------|--------------|
+| resnset18 (img -> concept)    | ~80%           | ~80%         |
+| linear (concepts -> classe)   | ~90%           | ~92%         |
 
 <br><br>
 
