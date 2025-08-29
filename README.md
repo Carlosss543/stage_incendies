@@ -34,28 +34,42 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 <br>
 
 #### Le dossier "divers" contient des codes qui m'ont permis de faire des tests à différentes étapes ainsi que des codes pour obtenir des informations sur le dataset.
--training_curves contient les courbes d'entraînement associées aux poids se trouvant dans weight <br>
--loader.ipynb contient un exemple d'utilisation du loader associé au dataset final se trouvant dans utils <br>
--regression.ipynb entraîne une couche linéaire à prédire les classes à partir des attributs <br>
--resnet_sur_crops.ipynb entraîne un resnet18 à prédire la classe à partir d'un crop (d'image satellite ou d'image annotée) <br>
--resnet_sur_imgs.ipynb permet de faire la même chose avec des images de taille quelconque et pas nécessairement des crops <br>
--stats.ipynb contient des graphes et des statistiques sur les annotations des images et à permis de choisir ce qui était utile ou non pour la création des concepts <br>
--stats.txt contient un résumé de certaines de ces informations et **une explication de ce à quoi correpondent les différentes features** <br>
--tests.ipynb contient quelques tests faits sur le dataset (vérifier que les intersections des splits sont vides, trouver les tailles minimales et maximales des images)
+- training_curves contient les courbes d'entraînement associées aux poids se trouvant dans weight <br>
+- loader.ipynb contient un exemple d'utilisation du loader associé au dataset final se trouvant dans utils <br>
+- regression.ipynb entraîne une couche linéaire à prédire les classes à partir des attributs <br>
+- resnet_sur_crops.ipynb entraîne un resnet18 à prédire la classe à partir d'un crop (d'image satellite ou d'image annotée) <br>
+- resnet_sur_imgs.ipynb permet de faire la même chose avec des images de taille quelconque et pas nécessairement des crops <br>
+- stats.ipynb contient des graphes et des statistiques sur les annotations des images et à permis de choisir ce qui était utile ou non pour la création des concepts <br>
+- stats.txt contient un résumé de certaines de ces informations et **une explication de ce à quoi correpondent les différentes features** <br>
+- tests.ipynb contient quelques tests faits sur le dataset (vérifier que les intersections des splits sont vides, trouver les tailles minimales et maximales des images)
 
 
-<br><br>
+<br>
 
 ### Le dossier "interprétabilité" contient les différents modèles de l'architecture et des tests pour voir à quoi réagissent les neurones de la couche sparse du vae.
--
+- training_curves contient les courbes d'entraînement associées aux poids se trouvant dans weight <br>
+- interpretability.ipynb contient différents tests réalisés avec l'architecture finale (trouver les images qui activent un concept, trouver les images qui activent un neurone, trouver quels neurones contribuent à un concept et avec quel force et enfin des recherches de relations avec t-SNE)
+- sparse_autoencoder.ipynb entraîne le sae à partir de l'avant dernière couche du resnet (les poids de ce derniers sont chargés depuis l'entraînement fait avec le code resnet_sur_imgs.ipynb du dossier divers)
+- z_to_attributs.ipynb entraîne le fully_connected à relier les activations du sae aux concepts
 
-Le dossier "approche_concurrente" contient l'implémentation d'une approche concurrente qui consiste à utiliser le Resnet18 pour prédire les attributs puis à utiliser une couche linéaire pour passer des attributs aux classes. Ainsi la prédiction des attributs ne se fait plus de manière implicite mais explicite.
+<br>
 
-Le dossier "segmentation_semantique" contient tous les codes de segmentation sémantique et de traitement d'images que j'ai réalisé.
+### Le dossier "approche_concurrente" contient l'implémentation d'une approche concurrente qui consiste à utiliser le Resnet18 pour prédire les attributs puis à utiliser une couche linéaire pour passer des attributs aux classes. Ainsi la prédiction des attributs ne se fait plus de manière implicite mais explicite.
+- training_curves contient les courbes d'entraînement associées aux poids se trouvant dans weight <br>
+- attributs_to_classes.ipynb entraîne une couche linéaire à prédire la classe à partir des concepts
+- imgs_to_attributs.ipynb entraîne un resnet18 à prédire les concepts à partir de l'image satellite
+- interpretabilite.ipynb n'est pas très complet, il contient seulement un code qui affiche les images activant le plus fortement un concept
 
 
+### Le dossier "segmentation_semantique" contient tous les codes de segmentation sémantique et de traitement d'images que j'ai réalisé.
+- segmentation_semantique_ann.ipynb rajoute une conv transposed à un resnet18 pour prédire l'image annotée
+- segmentation_semantique_atrous.ipynb fait quelque chose de similaire mais prédit le masque de brûlé et utilise des convolutions à trous
+- segmentation_semantique_ouvertureSurfacique 1 et 2 pré traitent les masques de brûlé pour rendre la segmentation plus facile
+- segmentation_semantique_pretrained.ipynb prédit le masque de brûlé en greffant une conv transposed à un resnet pré-entrainé pour prédire les classes
+- segmentation_semantique_unet.ipynb prédit le masque de brûlé avec un unet
+- traitement_images 1 et 2 étudies les transformations utilisées dans segmentation_semantique_ouvertureSurfacique
 
+<br>
 
-
-UNE PARTIE DU CODE À ÉTÉ RÉORGANISÉE À LA FIN ET IL EST DONC POSSIBLE QU'IL Y AIT DES ERREURS DANS LES CHEMINS, NOTAMMENT DANS LES CODES DE divers/ 
+### UNE PARTIE DU CODE À ÉTÉ RÉORGANISÉE À LA FIN ET IL EST DONC POSSIBLE QUE CERTAINS CHEMINS DOIVENT ÊTRE MODIFIÉS, NOTAMMENT DANS LES CODES DE divers/ 
 
