@@ -4,7 +4,7 @@ Il faut déjà avoir téléchargé le jeu de données data/dataset/split avec sp
 utils contient des fonctions auxiliaires et surtout un loader pytorch pour le jeu de donné. Il y a un exemple d'utilisation de ce loader à l'emplacement divers/loader.ipynb.
 
 
----------------------------
+---
 
 
 Les données sont dans le dossier data dont l'arborescence est : <br>
