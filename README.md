@@ -8,7 +8,7 @@ utils contient des fonctions auxiliaires et surtout un loader pytorch pour le je
 
 ---
 
-### Descriptif détaillé du contenu
+### Descriptif détaillé par dossier
 
 
 Les données sont dans le dossier data dont l'arborescence est : <br>
@@ -20,9 +20,7 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
     ├─ dataset_crops_paires <br>
     ├─ dataset_crops_satv
 
-<br><br><br>
-
-
+<br><br>
 
 #### Le dossier "create_datasets" contient des codes pour créer divers types de datasets qui m'ont été utiles au cours de ce projet.<br>"create_attributs.ipynb" et "create_dataset_crops.ipynb" sont obsolètes car "create_dataset_final.ipynb" fait les deux et "create_datasets_crops_paires.ipynb" est seulement utile pour la partie segmentation. <br>
     create_attributs.ipynb produit des paires (concepts, classes)
@@ -30,13 +28,22 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
     create_datasets_crops_paires produit des paires (images, masques de brûlé) avec images pouvant être les images satellites ou annotées
     create_datasets_crops.ipynb produit des paires (images, classes) avec images pouvant être les images satellites ou annotées
 
+<br><br>
+
+##### Le dossier "divers" contient des codes qui m'ont permis de faire des tests à différentes étapes ainsi que des codes pour obtenir des informations sur le dataset.
+    training_curves contient les courbes d'entraînement associées aux poids se trouvant dans weight
+    loader.ipynb contient un exemple d'utilisation du loader associé au dataset final se trouvant dans utils
+    regression.ipynb entraîne une couche linéaire à prédire les classes à partir des attributs
+    resnet_sur_crops.ipynb entraîne un resnet18 à prédire la classe à partir d'un crop (d'image satellite ou d'image annotée)
+    resnet_sur_imgs.ipynb permet de faire la même chose avec des images de taille quelconque et pas nécessairement des crops
+    stats.ipynb contient des graphes et des statistiques sur les annotations des images et à permis de choisir ce qui était utile ou non pour la création des concepts
+    stats.txt contient un résumé de certaines de ces informations et **une explication de ce à quoi correpondent les différentes features**
+    tests.ipynb contient quelques tests faits sur le dataset (vérifier que les intersections des splits sont vides, trouver les tailles minimales et maximales des images)
 
 
+<br><br>
 
-
-Le dossier "divers" contient des codes qui m'ont permis de faire des tests à différentes étapes ainsi que des codes pour obtenir des informations sur le dataset.
-
-Le dossier "interprétabilité" contient les différents modèles de l'architecture et des tests pour voir à quoi réagissent les neurones de la couche sparse du vae.
+#### Le dossier "interprétabilité" contient les différents modèles de l'architecture et des tests pour voir à quoi réagissent les neurones de la couche sparse du vae.
 
 Le dossier "approche_concurrente" contient l'implémentation d'une approche concurrente qui consiste à utiliser le Resnet18 pour prédire les attributs puis à utiliser une couche linéaire pour passer des attributs aux classes. Ainsi la prédiction des attributs ne se fait plus de manière implicite mais explicite.
 

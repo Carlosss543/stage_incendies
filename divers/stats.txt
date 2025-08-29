@@ -17,8 +17,17 @@ feature8 : Crops
 feature9 : Snow/Ice
 feature10 : Clouds
 
+feature1d1 : Trees damage 1
+feature1d2 : Trees damage 2
+feature1d3 : Trees damage 3
+feature1d4 : Trees damage 4
+feature7d1 : Scrub/shrub damage 1
+feature7d2 : Scrub/shrub damage 2
+feature7d3 : Scrub/shrub damage 3
+feature7d4 : Scrub/shrub damage 4
 
-features qui semblent importantes :
+
+features qui semblent importantes parmi les 10 annotations :
 1, 2, 3, 4, 6, 7, 8
 
 feature0 n'est présente que dans le test_set
