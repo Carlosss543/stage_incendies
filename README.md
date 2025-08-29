@@ -91,7 +91,6 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 |-------------------------------|----------------|--------------|
 | resnet18 (img -> classe)      | ~91%           | ~92%         |
 | linear (concepts -> classe)   | ~95%           | ~97%         |
-|---------------------------------------------------------------|
 
 <br>
 
@@ -102,5 +101,5 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 <br><br>
 
-### NOTE : UNE PARTIE DU CODE À ÉTÉ RÉORGANISÉE À LA FIN ET IL EST DONC POSSIBLE QUE CERTAINS CHEMINS DOIVENT ÊTRE MODIFIÉS, NOTAMMENT DANS LES CODES DE divers/ 
+### NOTE : UNE PARTIE DU CODE À ÉTÉ RÉORGANISÉE À LA FIN ET IL EST DONC POSSIBLE QUE CERTAINS CHEMINS DOIVENT ÊTRE MODIFIÉS, NOTAMMENT DANS LES CODES DU DOSSIER divers
 
