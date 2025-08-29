@@ -80,5 +80,14 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 <br>
 
-### UNE PARTIE DU CODE À ÉTÉ RÉORGANISÉE À LA FIN ET IL EST DONC POSSIBLE QUE CERTAINS CHEMINS DOIVENT ÊTRE MODIFIÉS, NOTAMMENT DANS LES CODES DE divers/ 
+## RÉCAPITULATIF DES ACCURACIES
+
+| modèle    | train accuracy | val accuracy |
+|-----------|----------------|--------------|
+| Ligne 1   | Valeur A       | Valeur B     |
+| Ligne 2   | Valeur C       | Valeur D     |
+
+<br><br>
+
+### NOTE : UNE PARTIE DU CODE À ÉTÉ RÉORGANISÉE À LA FIN ET IL EST DONC POSSIBLE QUE CERTAINS CHEMINS DOIVENT ÊTRE MODIFIÉS, NOTAMMENT DANS LES CODES DE divers/ 
 
