@@ -71,5 +71,13 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 <br>
 
+### utils.py contient des fonctions qui sont réutilisées dans les autres parties du projet
+- rajouter_features rajoute aux images annotées des nouvelles annotations correspondant aux intersections avec les masques de brûlé
+- ImageDataset est le loader associé au dataset final
+- random_90_rotation est une transformation pour faire de l'augmentation de données sur le jeu de données d'images satellites, cela fait tourner l'image de 0, 90, 180 ou 270 degré (invariances d'une image satellite)
+- get_device renvoie le device disponible par ordre de priorité gpu puis mps (pour mac) puis cpu
+
+<br>
+
 ### UNE PARTIE DU CODE À ÉTÉ RÉORGANISÉE À LA FIN ET IL EST DONC POSSIBLE QUE CERTAINS CHEMINS DOIVENT ÊTRE MODIFIÉS, NOTAMMENT DANS LES CODES DE divers/ 
 
