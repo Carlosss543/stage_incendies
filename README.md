@@ -68,7 +68,7 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 - segmentation_semantique_ouvertureSurfacique 1 et 2 pré traitent les masques de brûlé pour rendre la segmentation plus facile
 - segmentation_semantique_pretrained.ipynb prédit le masque de brûlé en greffant une conv transposed à un resnet pré-entrainé pour prédire les classes
 - segmentation_semantique_unet.ipynb prédit le masque de brûlé avec un unet
-- traitement_images 1 et 2 étudies les transformations utilisées dans segmentation_semantique_ouvertureSurfacique
+- traitement_images 1 et 2 étudient les transformations utilisées dans segmentation_semantique_ouvertureSurfacique
 
 <br>
 
