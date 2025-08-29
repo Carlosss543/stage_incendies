@@ -41,7 +41,7 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 - resnet_sur_crops.ipynb entraîne un resnet18 à prédire la classe à partir d'un crop (d'image satellite ou d'image annotée) <br>
 - resnet_sur_imgs.ipynb permet de faire la même chose avec des images de taille quelconque et pas nécessairement des crops <br>
 - stats.ipynb contient des graphes et des statistiques sur les annotations des images et à permis de choisir ce qui était utile ou non pour la création des concepts <br>
-- stats.txt contient un résumé de certaines de ces informations et **une explication de ce à quoi correpondent les différentes features** <br>
+- stats.txt contient un résumé de certaines de ces informations et <u>une explication de ce à quoi correpondent les différentes features </u> <br>
 - tests.ipynb contient quelques tests faits sur le dataset (vérifier que les intersections des splits sont vides, trouver les tailles minimales et maximales des images)
 
 <br>
