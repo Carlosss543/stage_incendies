@@ -7,3 +7,6 @@ weights/
 
 # ignorer le pycache
 __pycache__/
+
+# visualisation de feature que je n'ai pas eut le temps de finir
+feature_visualization.ipynb
