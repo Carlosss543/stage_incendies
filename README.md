@@ -1,4 +1,4 @@
-### Pour utilise le jeu de données
+## Pour utilise le jeu de données
 
 Pour créer le jeu de données final il faut lancer create_dataset_final.ipynb en spécifiant la valeur de split et de crop_size.
 Il faut déjà avoir téléchargé le jeu de données data/dataset/split avec split égal à train, val ou test.
@@ -25,15 +25,15 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 <br>
 
-#### Le dossier "create_datasets" contient des codes pour créer divers types de datasets qui m'ont été utiles au cours de ce projet.<br>"create_attributs.ipynb" et "create_dataset_crops.ipynb" sont obsolètes car "create_dataset_final.ipynb" fait les deux et "create_datasets_crops_paires.ipynb" est seulement utile pour la partie segmentation. <br>
--create_attributs.ipynb produit des paires (concepts, classes) <br>
--create_dataset_final.ipynb produit des triplets (images, concepts, classes) <br>
--create_datasets_crops_paires produit des paires (images, masques de brûlé) avec images pouvant être les images satellites ou annotées <br>
--create_datasets_crops.ipynb produit des paires (images, classes) avec images pouvant être les images satellites ou annotées
+### Le dossier "create_datasets" contient des codes pour créer divers types de datasets qui m'ont été utiles au cours de ce projet.<br>"create_attributs.ipynb" et "create_dataset_crops.ipynb" sont obsolètes car "create_dataset_final.ipynb" fait les deux et "create_datasets_crops_paires.ipynb" est seulement utile pour la partie segmentation. <br>
+- create_attributs.ipynb produit des paires (concepts, classes) <br>
+- create_dataset_final.ipynb produit des triplets (images, concepts, classes) <br>
+- create_datasets_crops_paires produit des paires (images, masques de brûlé) avec images pouvant être les images satellites ou annotées <br>
+- create_datasets_crops.ipynb produit des paires (images, classes) avec images pouvant être les images satellites ou annotées
 
 <br>
 
-##### Le dossier "divers" contient des codes qui m'ont permis de faire des tests à différentes étapes ainsi que des codes pour obtenir des informations sur le dataset.
+#### Le dossier "divers" contient des codes qui m'ont permis de faire des tests à différentes étapes ainsi que des codes pour obtenir des informations sur le dataset.
 -training_curves contient les courbes d'entraînement associées aux poids se trouvant dans weight <br>
 -loader.ipynb contient un exemple d'utilisation du loader associé au dataset final se trouvant dans utils <br>
 -regression.ipynb entraîne une couche linéaire à prédire les classes à partir des attributs <br>
@@ -46,7 +46,8 @@ Les données sont dans le dossier data dont l'arborescence est : <br>
 
 <br><br>
 
-#### Le dossier "interprétabilité" contient les différents modèles de l'architecture et des tests pour voir à quoi réagissent les neurones de la couche sparse du vae.
+### Le dossier "interprétabilité" contient les différents modèles de l'architecture et des tests pour voir à quoi réagissent les neurones de la couche sparse du vae.
+-
 
 Le dossier "approche_concurrente" contient l'implémentation d'une approche concurrente qui consiste à utiliser le Resnet18 pour prédire les attributs puis à utiliser une couche linéaire pour passer des attributs aux classes. Ainsi la prédiction des attributs ne se fait plus de manière implicite mais explicite.
 
